@@ -18,7 +18,7 @@ error_exit() {
     exit 1
 }
 
-while getopts "hl:n:d:m:" opt; do
+while getopts "hl:n:a:m:" opt; do
     case "$opt" in
         h)
             usage
