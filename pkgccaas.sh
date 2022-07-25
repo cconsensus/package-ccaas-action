@@ -72,7 +72,7 @@ fi
 mkdir -p "$tempdir/src"
 cat << CONNECTION-EOF > "$tempdir/src/connection.json"
 {
-  "address": "$cc_address",
+  "address": "$address",
   "dial_timeout": "10s",
   "tls_required": false
 }
