@@ -1,0 +1,19 @@
+name: 'Package Chaincode as an external service'
+description: 'Create a Chaincode as an external service package file'
+inputs:
+  chaincode-label:
+    description: 'Chaincode label'
+    required: true
+  chaincode-image:
+    description: 'Chaincode docker image name'
+    required: true
+  chaincode-address:
+    description: 'Chaincode address'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.chaincode-label }}
+    - ${{ inputs.chaincode-image }}
+    - ${{ inputs.chaincode-address }}
